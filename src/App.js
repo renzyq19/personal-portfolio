@@ -3,28 +3,29 @@ import React from 'react';
 class App extends React.Component {
   constructor() {
     super();
-    this.state = { currentEvent: '===' };
+    this.state = { a: '' };
     this.update = this.update.bind(this);
   }
-  update(e) {
-    this.setState({ currentEvent: e.type });
+  update() {
+    this.setState({
+      a: this.a.value,
+      b: this.b.value,
+    });
   }
-
   render() {
     return (
       <div>
-        <textarea
-          onKeyPress={this.update}
-          onCopy={this.update}
-          onCut={this.update}
-          onPaste={this.update}
-          onFocus={this.update}
-          onBlur={this.update}
-          onDoubleClick={this.update}
-          cols="30"
-          rows="10"
-        />
-        <h1>{this.state.currentEvent}</h1>
+        <input
+          ref={node => this.a = node}
+          type="text"
+          onChange={this.update}
+        /> {this.state.a}
+        <hr />
+        <input
+          ref={node => this.b = node}
+          type="text"
+          onChange={this.update}
+        /> {this.state.b}
       </div>
     );
   }
