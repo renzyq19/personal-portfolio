@@ -1,34 +1,17 @@
 import React from 'react';
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = { a: '' };
-    this.update = this.update.bind(this);
-  }
-  update() {
-    this.setState({
-      a: this.a.value,
-      b: this.b.value,
-    });
-  }
-  render() {
-    return (
-      <div>
-        <input
-          ref={node => this.a = node}
-          type="text"
-          onChange={this.update}
-        /> {this.state.a}
-        <hr />
-        <input
-          ref={node => this.b = node}
-          type="text"
-          onChange={this.update}
-        /> {this.state.b}
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div id="main">
+    <NavBar />
+  </div>
+);
+
+const NavBar = () => (
+  <nav className="navbar">
+    <div className="container-fluid">
+      HELLO
+    </div>
+  </nav>
+);
 
 export default App;
