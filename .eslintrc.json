@@ -7,8 +7,7 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }] ,
-        "react/jsx-no-bind": 1
-
+        "react/jsx-no-bind": 1 
     },
     "globals": {
       "document": true
