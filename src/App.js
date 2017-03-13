@@ -28,27 +28,30 @@ const Headshot = () => (
 
 const Information = () => (
   <div className="col-md-6">
-    <div className="jumbotron">
-      <h3> Will de Renzy-Martin </h3>
-      <p className="lead">
-        Graduating Actor, Spotlight Pin: <a href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
-      </p>
-      <hr className="my-4" />
-      <p>
-        I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
-      </p>
-      <p>
-        In my next production, &quot;{productionTitle}&quot; by {writer}, directed
-        by {director}, I will be playing {character}.
-      </p>
-      <p>
-        Performances in the {theatre} on : <br />
-        {eveningShows} at 19:30, <br />
-        and {matineeShows} at 14:00
-      </p>
+    <div className="card">
+      <div className="card-header">
+        <h4 className="card-title"> Will de Renzy-Martin </h4>
+        <h6 className="card-subtitle">
+          Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
+        </h6>
+      </div>
+      <div className="card-block">
+        <p className="card-text">
+          I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
+        </p>
+        <p className="card-text">
+          In my next production, &quot;{productionTitle}&quot; by {writer}, directed
+          by {director}, I will be playing {character}.
+        </p>
+        <p className="card-text">
+          Performances in the {theatre} on : <br />
+          {eveningShows} at 19:30, <br />
+          and {matineeShows} at 14:00
+        </p>
+      </div>
       <TicketInfo />
-      <ConstructionDisclaimer />
       <VimeoFrame videoID={189426939} />
+      <ConstructionDisclaimer />
     </div>
   </div>
 );
@@ -68,16 +71,20 @@ VimeoFrame.propTypes = {
 };
 
 const TicketInfo = () => (
-  <p>
+  <div className="card-block">
+    <p className="card-text">
     For ticket information, please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
-  </p>
+    </p>
+  </div>
 );
 
 const ConstructionDisclaimer = () => (
-  <p>
-    This website is currently under construction,
-    but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
-  </p>
+  <div className="card-footer">
+    <p className="card-text">
+      This website is currently under construction,
+      but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
+    </p>
+  </div>
 );
 
 export default App;
