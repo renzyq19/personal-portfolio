@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from './headshot.JPG';
+import './App.css';
 
 const cvLocation = 'https://drive.google.com/open?id=1LYrnSiwuEXOLIoK16zSH4s3c6Ts6sQfaBsCRFnZWNVgdeIWl0HAw85ze-L7raGjI71cBmvB6OUuDlfEL';
 const productionTitle = 'Balm in Gilead';
@@ -21,8 +21,8 @@ const App = () => (
 
 
 const Headshot = () => (
-  <div className="col-md-6">
-    <img className="img-fluid" src={headshot} alt="Will de Renzy-Martin" />
+  <div className="col-md-6 no-padding">
+    <div className="container height-responsive" />
   </div>
 );
 
@@ -48,10 +48,25 @@ const Information = () => (
         </p>
         <TicketInfo />
         <ConstructionDisclaimer />
+        <VimeoFrame videoID={189426939} />
       </div>
     </div>
   </div>
 );
+
+const VimeoFrame = props => (
+  <iframe
+    src={`https://player.vimeo.com/video/${props.videoID}`}
+    width="100%"
+    height="360"
+    frameBorder="0"
+    allowFullScreen=""
+  />
+);
+
+VimeoFrame.propTypes = {
+  videoID: React.PropTypes.number,
+};
 
 const TicketInfo = () => (
   <p>
