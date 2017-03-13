@@ -11,7 +11,7 @@ const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
 const matineeShows = 'March 27th, 29th';
 
 const App = () => (
-  <div className="container-fluid">
+  <div className="container-fluid no-margin">
     <div className="row">
       <Headshot />
       <Information />
@@ -22,34 +22,33 @@ const App = () => (
 
 const Headshot = () => (
   <div className="col-md-6 no-padding">
-    <div className="container height-responsive" />
+    <div className="height-responsive" />
   </div>
 );
 
 const Information = () => (
   <div className="col-md-6">
-    <div className="container">
-      <div className="jumbotron">
-        <h3> Will de Renzy-Martin </h3>
-        <p className="lead">
-          Graduating Actor, Spotlight Pin: <a href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
-        </p>
-        <p>
-          I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
-        </p>
-        <p>
-          In my next production, &quot;{productionTitle}&quot; by {writer}, directed
-          by {director}, I will be playing {character}.
-        </p>
-        <p>
-          Performances in the {theatre} on : <br />
-          {eveningShows} at 19:30, <br />
-          and {matineeShows} at 14:00
-        </p>
-        <TicketInfo />
-        <ConstructionDisclaimer />
-        <VimeoFrame videoID={189426939} />
-      </div>
+    <div className="jumbotron">
+      <h3> Will de Renzy-Martin </h3>
+      <p className="lead">
+        Graduating Actor, Spotlight Pin: <a href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
+      </p>
+      <hr className="my-4" />
+      <p>
+        I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
+      </p>
+      <p>
+        In my next production, &quot;{productionTitle}&quot; by {writer}, directed
+        by {director}, I will be playing {character}.
+      </p>
+      <p>
+        Performances in the {theatre} on : <br />
+        {eveningShows} at 19:30, <br />
+        and {matineeShows} at 14:00
+      </p>
+      <TicketInfo />
+      <ConstructionDisclaimer />
+      <VimeoFrame videoID={189426939} />
     </div>
   </div>
 );

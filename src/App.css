@@ -1,0 +1,35 @@
+.height-responsive {
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+  background-image:url(headshot.JPG);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-clip: border-box;
+}
+
+.jumbotron {
+  margin-top: 1rem;
+}
+
+.no-margin{
+  margin:0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+@media (max-width:768px){
+  .height-responsive {
+    height: 400px
+  }
+}
+
+@media (max-width:576px){
+  .height-responsive {
+    height: 220px
+  }
+}
