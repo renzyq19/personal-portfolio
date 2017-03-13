@@ -11,7 +11,7 @@ const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
 const matineeShows = 'March 27th, 29th';
 
 const App = () => (
-  <div className="container-fluid no-margin">
+  <div className="container-fluid">
     <div className="row">
       <Headshot />
       <Information />
@@ -60,7 +60,7 @@ const VimeoFrame = props => (
   <iframe
     src={`https://player.vimeo.com/video/${props.videoID}`}
     width="100%"
-    height="360"
+    height="350rem"
     frameBorder="0"
     allowFullScreen=""
   />

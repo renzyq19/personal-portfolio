@@ -18,6 +18,9 @@
   margin:0;
 }
 
+.card {
+  margin: 1rem;
+}
 .no-padding {
   padding: 0;
 }
