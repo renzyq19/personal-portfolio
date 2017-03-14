@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './NavBar';
 import './App.css';
 
 const cvLocation = 'https://drive.google.com/open?id=1LYrnSiwuEXOLIoK16zSH4s3c6Ts6sQfaBsCRFnZWNVgdeIWl0HAw85ze-L7raGjI71cBmvB6OUuDlfEL';
@@ -13,6 +14,7 @@ const matineeShows = 'March 27th, 29th';
 const App = () => (
   <div className="container-fluid">
     <div className="row">
+        Will de Renzy-Martin
       <Headshot />
       <Information />
     </div>

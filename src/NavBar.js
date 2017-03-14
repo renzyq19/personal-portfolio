@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './guildhall-logo.svg';
 
-const NavBar = () => (
+const NavBar = props => (
   <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
     <div className="container">
       <button
@@ -13,7 +13,7 @@ const NavBar = () => (
       </button>
       <a className="navbar-brand" href="#1">
         <img src={logo} width={100} height={100} alt="logo" />
-        Will de Renzy-Martin
+        {props.name}
       </a>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
@@ -44,4 +44,7 @@ const NavBar = () => (
   </nav>
 );
 
+NavBar.propTypes = {
+  name: React.PropTypes.string,
+};
 export default NavBar;
