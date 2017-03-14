@@ -12,18 +12,20 @@ const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
 const matineeShows = 'March 27th, 29th';
 
 const App = () => (
-  <div className="container-fluid">
-    <div className="row">
-        Will de Renzy-Martin
-      <Headshot />
-      <Information />
+  <div>
+    <NavBar name="Will de Renzy-Martin" />
+    <div className="container-fluid">
+      <div className="row">
+        <Headshot />
+        <Information />
+      </div>
     </div>
   </div>
 );
 
 
 const Headshot = () => (
-  <div className="col-md-6 no-padding">
+  <div className="col-md-6">
     <div className="height-responsive" />
   </div>
 );
@@ -51,9 +53,19 @@ const Information = () => (
           and {matineeShows} at 14:00
         </p>
       </div>
-      <TicketInfo />
+      <div className="card-block">
+        <p className="card-text">
+          For ticket information,
+          please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
+        </p>
+      </div>
       <VimeoFrame videoID={189426939} />
-      <ConstructionDisclaimer />
+      <div className="card-footer">
+        <p className="card-text">
+          This website is currently under construction,
+          but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
+        </p>
+      </div>
     </div>
   </div>
 );
@@ -71,22 +83,5 @@ const VimeoFrame = props => (
 VimeoFrame.propTypes = {
   videoID: React.PropTypes.number,
 };
-
-const TicketInfo = () => (
-  <div className="card-block">
-    <p className="card-text">
-    For ticket information, please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
-    </p>
-  </div>
-);
-
-const ConstructionDisclaimer = () => (
-  <div className="card-footer">
-    <p className="card-text">
-      This website is currently under construction,
-      but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
-    </p>
-  </div>
-);
 
 export default App;
