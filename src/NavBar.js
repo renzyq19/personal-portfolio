@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './guildhall-logo.svg';
 
-const NavBar = props => (
+const NavBar = () => (
   <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
     <div className="container">
       <button
@@ -11,9 +11,8 @@ const NavBar = props => (
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <a className="navbar-brand" href="#1">
+      <a className="navbar-brand" href="#about">
         <img src={logo} width={100} height={100} alt="logo" />
-        {props.name}
       </a>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
@@ -30,7 +29,7 @@ const NavBar = props => (
               id="navbarDropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false"
             >
-              Dropdown
+              Section
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a className="dropdown-item" href="#acting">Acting</a>
@@ -44,7 +43,4 @@ const NavBar = props => (
   </nav>
 );
 
-NavBar.propTypes = {
-  name: React.PropTypes.string,
-};
 export default NavBar;
