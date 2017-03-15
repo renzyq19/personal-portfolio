@@ -81,7 +81,6 @@ const HeadshotCarousel = () => (
   <div id="headshotCarousel" height="350rem" className="carousel slide" data-ride="carousel">
     <ol className="carousel-indicators">
       <li data-target="#headshotCarousel" data-slide-to="0" className="active" />
-      <li data-target="#headshotCarousel" data-slide-to="1" />
     </ol>
     <div className="carousel-inner" role="listbox">
       <div className="carousel-item active height-responsive" >
