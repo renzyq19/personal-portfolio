@@ -14,16 +14,18 @@ const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
 const matineeShows = 'March 27th, 29th';
 
 const App = () => (
-  <div className="container-fluid">
+  <div>
     <NavBar name={name} />
-    <div className="justify-content-center row">
-      <div className="col-md-8">
-        <HeadshotCarousel />
+    <div className="container-fluid">
+      <div className="justify-content-center row">
+        <div className="col-md-8">
+          <HeadshotCarousel />
+        </div>
       </div>
-    </div>
-    <div className="justify-content-center row">
-      <div className="col-md-6">
-        <Information />
+      <div className="justify-content-center row">
+        <div className="col-md-6">
+          <Information />
+        </div>
       </div>
     </div>
   </div>
