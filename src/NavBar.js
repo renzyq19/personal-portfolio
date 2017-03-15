@@ -16,8 +16,8 @@ const NavBar = () => (
       </a>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <a className="nav-item nav-link active" href="#about">
-            About <span className="sr-only">(current)</span>
+          <a className="nav-item nav-link active" href="#home">
+            Home <span className="sr-only">(current)</span>
           </a>
         </div>
       </div>
