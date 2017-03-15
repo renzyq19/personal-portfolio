@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './guildhall-logo.svg';
 
 const NavBar = () => (
-  <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
+  <nav className="navbar navbar-toggleable navbar-light navbar-static-top bg-faded">
     <div className="container">
       <button
         className="navbar-toggler navbar-toggler-right" type="button"

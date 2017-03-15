@@ -10,6 +10,10 @@
   background-clip: border-box;
 }
 
+.darkened-background {
+  background-color: rgba(0,0,0,0.5);
+}
+
 .jumbotron {
   margin-top: 1rem;
 }
@@ -23,6 +27,12 @@
 }
 .no-padding {
   padding: 0;
+}
+
+@media (min-width:768px){
+  .height-responsive {
+    height: 500px;
+  }
 }
 
 @media (max-width:768px){

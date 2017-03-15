@@ -1,4 +1,5 @@
 import React from 'react';
+import headshot from './headshot.JPG';
 import NavBar from './NavBar';
 import './App.css';
 
@@ -15,58 +16,47 @@ const matineeShows = 'March 27th, 29th';
 const App = () => (
   <div className="container-fluid">
     <NavBar name={name} />
-    <div className="row">
-      <Headshot />
-      <Information />
+    <div className="justify-content-center row">
+      <div className="col-md-8">
+        <HeadshotCarousel />
+      </div>
+    </div>
+    <div className="justify-content-center row">
+      <div className="col-md-6">
+        <Information />
+      </div>
     </div>
   </div>
 );
 
-
-const Headshot = () => (
-  <div className="col-md-6">
-    <div className="height-responsive" />
-  </div>
-);
-
 const Information = () => (
-  <div className="col-md-6">
-    <div className="card">
-      <div className="card-header">
-        <h4 className="card-title">
-          {name}
-        </h4>
-        <h6 className="card-subtitle">
-          Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
-        </h6>
-      </div>
-      <div className="card-block">
-        <p className="card-text">
-          I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
-        </p>
-        <p className="card-text">
-          In my next production, &quot;{productionTitle}&quot; by {writer}, directed
-          by {director}, I will be playing {character}.
-        </p>
-        <p className="card-text">
-          Performances in the {theatre} on : <br />
-          {eveningShows} at 19:30, <br />
-          and {matineeShows} at 14:00
-        </p>
-      </div>
-      <div className="card-block">
-        <p className="card-text">
-          For ticket information,
-          please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
-        </p>
-      </div>
-      <VimeoFrame videoID={189426939} />
-      <div className="card-footer">
-        <p className="card-text">
-          This website is currently under construction,
-          but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
-        </p>
-      </div>
+  <div className="card">
+    <div className="card-block">
+      <p className="card-text">
+        I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
+      </p>
+      <p className="card-text">
+        In my next production, &quot;{productionTitle}&quot; by {writer}, directed
+        by {director}, I will be playing {character}.
+      </p>
+      <p className="card-text">
+        Performances in the {theatre} on : <br />
+        {eveningShows} at 19:30, <br />
+        and {matineeShows} at 14:00
+      </p>
+    </div>
+    <div className="card-block">
+      <p className="card-text">
+        For ticket information,
+        please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
+      </p>
+    </div>
+    <VimeoFrame videoID={189426939} />
+    <div className="card-footer">
+      <p className="card-text">
+        This website is currently under construction,
+        but feel free to take a look at my showreel, or browse my <a href={cvLocation}> CV</a>
+      </p>
     </div>
   </div>
 );
@@ -84,5 +74,24 @@ const VimeoFrame = props => (
 VimeoFrame.propTypes = {
   videoID: React.PropTypes.number,
 };
+
+const HeadshotCarousel = () => (
+  <div id="headshotCarousel" height="350rem" className="carousel slide" data-ride="carousel">
+    <ol className="carousel-indicators">
+      <li data-target="#headshotCarousel" data-slide-to="0" className="active" />
+      <li data-target="#headshotCarousel" data-slide-to="1" />
+    </ol>
+    <div className="carousel-inner" role="listbox">
+      <div className="carousel-item active height-responsive" >
+        <div className="carousel-caption d-none d-md-block darkened-background">
+          <h3> {name} </h3>
+            <p>
+              Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default App;
