@@ -1,0 +1,4 @@
+#!/bin/sh
+
+npm run build
+lftp ftp.renzy.co.uk -e "mirror -R build .;exit"
