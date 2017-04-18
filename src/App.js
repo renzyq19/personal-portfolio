@@ -1,5 +1,5 @@
 import React from 'react';
-import headshot from './headshot.JPG';
+import PropTypes from 'prop-types';
 import NavBar from './NavBar';
 import './App.css';
 
@@ -12,10 +12,15 @@ const character = 'Rake';
 const theatre = 'Silk Street Theatre';
 const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
 const matineeShows = 'March 27th, 29th';
+const links = [
+  'Home',
+  'News',
+  'Photos',
+];
 
 const App = () => (
   <div>
-    <NavBar name={name} />
+    <NavBar name={name} links={links} />
     <div className="container-fluid">
       <div className="justify-content-center row">
         <div className="col-md-8">
@@ -74,7 +79,7 @@ const VimeoFrame = props => (
 );
 
 VimeoFrame.propTypes = {
-  videoID: React.PropTypes.number,
+  videoID: PropTypes.number,
 };
 
 const HeadshotCarousel = () => (
@@ -86,9 +91,9 @@ const HeadshotCarousel = () => (
       <div className="carousel-item active height-responsive" >
         <div className="carousel-caption d-none d-md-block darkened-background">
           <h3> {name} </h3>
-            <p>
-              Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
-            </p>
+          <p>
+            Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
+          </p>
         </div>
       </div>
     </div>

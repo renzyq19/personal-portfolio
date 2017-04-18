@@ -1,7 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import logo from './guildhall-logo.svg';
 
-const NavBar = () => (
+const buildLinks = list => list.map(
+  (name, i) => (i === 0 ?
+    <a className="nav-item nav-link active" href={`#${name}`} key={name}>
+      {name} <span className="sr-only">(current)</span>
+    </a>
+  :
+    <a className="nav-item nav-link" href={`#${name}`} key={name}>{name}</a>
+  ));
+
+
+const NavBar = props => (
   <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
     <div className="container">
       <button
@@ -16,28 +27,15 @@ const NavBar = () => (
       </a>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <a className="nav-item nav-link active" href="#home">
-            Home <span className="sr-only">(current)</span>
-          </a>
+          {buildLinks(props.links)}
         </div>
       </div>
     </div>
   </nav>
 );
 
-const Dump = () => (
-  <div>
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div className="navbar-nav">
-        <a className="nav-item nav-link active" href="#about">
-          About <span className="sr-only">(current)</span>
-        </a>
-        <a className="nav-item nav-link" href="#news">News</a>
-        <a className="nav-item nav-link" href="#images">Images</a>
-        <a className="nav-item nav-link" href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
-);
+NavBar.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default NavBar;
