@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import NavBar from './NavBar';
 import './App.css';
@@ -19,21 +20,23 @@ const links = [
 ];
 
 const App = () => (
-  <div>
-    <NavBar name={name} links={links} />
-    <div className="container-fluid">
-      <div className="justify-content-center row">
-        <div className="col-md-8">
-          <HeadshotCarousel />
+  <BrowserRouter>
+    <div>
+      <NavBar name={name} links={links} />
+      <div className="container-fluid">
+        <div className="justify-content-center row">
+          <div className="col-md-8">
+            <HeadshotCarousel />
+          </div>
         </div>
-      </div>
-      <div className="justify-content-center row">
-        <div className="col-md-6">
-          <Information />
+        <div className="justify-content-center row">
+          <div className="col-md-6">
+            <Information />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </BrowserRouter>
 );
 
 const Information = () => (

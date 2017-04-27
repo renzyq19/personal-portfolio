@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import logo from './guildhall-logo.svg';
 
@@ -8,7 +9,7 @@ const buildLinks = list => list.map(
       {name} <span className="sr-only">(current)</span>
     </a>
   :
-    <a className="nav-item nav-link" href={`#${name}`} key={name}>{name}</a>
+    <NavLink activeClassName="active" className="nav-item nav-link" to={`#${name}`} key={name}>{name}</NavLink>
   ));
 
 
