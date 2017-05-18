@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import NavBar from './NavBar';
+import HeadshotCarousel from './HeadshotCarousel';
 import './App.css';
 
 const name = 'Will de Renzy-Martin';
 const cvLocation = 'https://drive.google.com/open?id=1LYrnSiwuEXOLIoK16zSH4s3c6Ts6sQfaBsCRFnZWNVgdeIWl0HAw85ze-L7raGjI71cBmvB6OUuDlfEL';
-const productionTitle = 'Balm in Gilead';
-const writer = 'Lanford Wilson';
-const director = 'Joseph Blatchley';
-const character = 'Rake';
-const theatre = 'Silk Street Theatre';
-const eveningShows = 'March 24th, 25th, 27th, 28th, 29th';
-const matineeShows = 'March 27th, 29th';
+const productionTitle = 'Notoriously Abused';
+const director = 'Richard Goulding';
+const character = 'Caliban and Brabantio';
+const theatre = 'Rehearsal Room 3 of Milton Court';
+const eveningShows = 'May 24th, 25th, 26th, and 27th';
+const matineeShows = 'May 25th, and 27th';
 const links = [
   'Home',
   'News',
@@ -46,11 +46,12 @@ const Information = () => (
         I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
       </p>
       <p className="card-text">
-        In my next production, &quot;{productionTitle}&quot; by {writer}, directed
-        by {director}, I will be playing {character}.
+        My next production will be &quot;{productionTitle}&quot;,
+        a compilation of 6 Shakespeare plays, directed
+        by {director}. I will be playing {character}.
       </p>
       <p className="card-text">
-        Performances in the {theatre} on : <br />
+        Performances in {theatre} on : <br />
         {eveningShows} at 19:30, <br />
         and {matineeShows} at 14:00
       </p>
@@ -85,22 +86,5 @@ VimeoFrame.propTypes = {
   videoID: PropTypes.number,
 };
 
-const HeadshotCarousel = () => (
-  <div id="headshotCarousel" height="350rem" className="carousel slide" data-ride="carousel">
-    <ol className="carousel-indicators">
-      <li data-target="#headshotCarousel" data-slide-to="0" className="active" />
-    </ol>
-    <div className="carousel-inner" role="listbox">
-      <div className="carousel-item active height-responsive" >
-        <div className="carousel-caption d-none d-md-block darkened-background">
-          <h3> {name} </h3>
-          <p>
-            Graduating Actor, Spotlight Pin: <a className="card-link" href="https://www.spotlight.com/interactive/cv/3811-6724-2735"> 3811-6274-2735 </a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 
 export default App;
