@@ -1,4 +1,9 @@
 #!/bin/sh
 
-npm run build
-lftp ftp.renzy.co.uk -e "mirror -R build .;exit"
+if [ ${PWD##*/} = "portfolio" ]
+then
+  npm run build
+  lftp ftp.renzy.co.uk -e "mirror -R build .;exit"
+else
+  echo "Only to be run in portfolio root!"
+fi
