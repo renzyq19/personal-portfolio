@@ -7,12 +7,10 @@ import './App.css';
 
 const name = 'Will de Renzy-Martin';
 const cvLocation = 'https://drive.google.com/open?id=1LYrnSiwuEXOLIoK16zSH4s3c6Ts6sQfaBsCRFnZWNVgdeIWl0HAw85ze-L7raGjI71cBmvB6OUuDlfEL';
-const productionTitle = 'Notoriously Abused';
-const director = 'Richard Goulding';
-const character = 'Caliban and Brabantio';
-const theatre = 'Rehearsal Room 3 of Milton Court';
-const eveningShows = 'May 24th, 25th, 26th, and 27th';
-const matineeShows = 'May 25th, and 27th';
+const productionTitle = 'Crazy for You';
+const director = 'Martin Connor';
+const character = 'Eugene Fodor';
+const theatre = 'The Silk Street Theatre';
 const links = [
   'Home',
   'News',
@@ -46,14 +44,12 @@ const Information = () => (
         I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
       </p>
       <p className="card-text">
-        My next production will be &quot;{productionTitle}&quot;,
-        a compilation of 6 Shakespeare plays, directed
-        by {director}. I will be playing {character}.
+        My next production will be &quot;{productionTitle}&quot;, directed by {director}.
+        I will be playing {character}.
       </p>
       <p className="card-text">
-        Performances in {theatre} on : <br />
-        {eveningShows} at 19:30, <br />
-        and {matineeShows} at 14:00
+        Performances in {theatre}
+        24th - 12 Jul 17 / 14:00, 19:30
       </p>
     </div>
     <div className="card-block">
