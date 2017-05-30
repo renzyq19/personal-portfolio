@@ -5,9 +5,10 @@ import logo from './guildhall-logo.svg';
 import logo2 from './MWLimited_WEBHEADER_400x73px.png';
 
 const buildLinks = list => list.map(
-  ((name) => {
+  ((name, i) => {
     const lowerName = name.toLowerCase();
-    return <NavLink activeClassName="active" className="nav-item nav-link" to={`/${lowerName}`} key={lowerName}>{name}</NavLink>;
+    const classes = `nav-item nav-link ${i ? 'disabled' : ''}`;
+    return <NavLink activeClassName="active" className={classes} to={`/${lowerName}`} key={lowerName}>{name}</NavLink>;
   }));
 
 

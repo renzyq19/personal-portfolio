@@ -44,12 +44,11 @@ const Information = () => (
         I am an actor in my final year at the <em>Guildhall School of Music and Drama.</em>
       </p>
       <p className="card-text">
-        My next production will be &quot;{productionTitle}&quot;, directed by {director}.
+        My next production will be &quot;{productionTitle}&quot; directed by {director}, where
         I will be playing {character}.
       </p>
       <p className="card-text">
-        Performances in {theatre}
-        24th - 12 Jul 17 / 14:00, 19:30
+        Performances in {theatre}<br />24th - 12 Jul 17 / 14:00, 19:30
       </p>
     </div>
     <div className="card-block">
