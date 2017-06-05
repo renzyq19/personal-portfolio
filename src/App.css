@@ -1,4 +1,4 @@
-.height-responsive {
+.headshot-background {
   height: 100%;
   width: auto;
   overflow: hidden;
@@ -30,19 +30,19 @@
 }
 
 @media (min-width:768px){
-  .height-responsive {
+  .headshot-background {
     height: 600px;
   }
 }
 
 @media (max-width:768px){
-  .height-responsive {
+  .headshot-background {
     height: 400px
   }
 }
 
 @media (max-width:576px){
-  .height-responsive {
+  .headshot-background {
     height: 220px
   }
 }

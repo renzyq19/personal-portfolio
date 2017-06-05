@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import NavBar from './NavBar';
 import HeadshotCarousel from './HeadshotCarousel';
 import './App.css';
@@ -13,8 +12,6 @@ const character = 'Eugene Fodor';
 const theatre = 'The Silk Street Theatre';
 const links = [
   'Home',
-  'News',
-  'Photos',
 ];
 
 const App = () => (
@@ -57,7 +54,6 @@ const Information = () => (
         please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
       </p>
     </div>
-    <VimeoFrame videoID={189426939} />
     <div className="card-footer">
       <p className="card-text">
         This website is currently under construction,
@@ -66,20 +62,6 @@ const Information = () => (
     </div>
   </div>
 );
-
-const VimeoFrame = props => (
-  <iframe
-    src={`https://player.vimeo.com/video/${props.videoID}`}
-    width="100%"
-    height="350rem"
-    frameBorder="0"
-    allowFullScreen=""
-  />
-);
-
-VimeoFrame.propTypes = {
-  videoID: PropTypes.number,
-};
 
 
 export default App;
