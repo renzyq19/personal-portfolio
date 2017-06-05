@@ -8,6 +8,8 @@ class HeadshotCarousel extends React.Component {
     super();
     this.carouselID = 'headshotCarousel';
     this.togglePlay = this.togglePlay.bind(this);
+    this.handleSlide = this.handleSlide.bind(this);
+    this.handleSlid = this.handleSlid.bind(this);
     this.state = {
       videoVisible: false,
     }
@@ -16,29 +18,33 @@ class HeadshotCarousel extends React.Component {
   componentDidMount() {
     this.video = document.querySelector('video');
     this.video.addEventListener('click', this.togglePlay);
-    this.carousel = $(this.carouselID);
+    this.carousel = $('#' + this.carouselID);
     this.carousel.on('slide.bs.carousel', this.handleSlide);
     this.carousel.on('slid.bs.carousel', this.handleSlid);
+    this.carousel.carousel('pause');
   }
 
   handleSlide(){
+    if(this.state.videoVisible){
+      this.video.pause();  
+    } 
     this.setState(prevState => ({videoVisible: !prevState.videoVisible }) )
-    console.log(`Slide, video ${this.state.videoVisible? 'visible': 'hidden'}`);
   }
 
   handleSlid(){
-    console.log(`Slid, video ${this.state.videoVisible? 'visible': 'hidden'}`);
+    if(this.state.videoVisible){
+      this.video.play();
+    }
   }
+
   togglePlay() {
     const video = this.video;
     video[video.paused ? 'play' : 'pause']();
-    this.carousel.carousel(video.paused ? 'cycle' : 'pause');
-    console.log(this.carousel);
   }
 
   render() {
     return (
-      <div id={this.carouselID} height="350rem" className="carousel slide" data-ride="carousel">
+      <div id={this.carouselID} height="350rem" className="carousel slide" data-ride="false" data-interval="10000">
         <ol className="carousel-indicators">
           <li data-target={`#${this.carouselID}`} data-slide-to="0" className="active" />
           <li data-target={`#${this.carouselID}`} data-slide-to="1" />
