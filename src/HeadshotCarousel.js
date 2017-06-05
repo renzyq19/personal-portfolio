@@ -32,9 +32,6 @@ class HeadshotCarousel extends React.Component {
   }
 
   handleSlid(){
-    if(this.state.videoVisible){
-      this.video.play();
-    }
   }
 
   togglePlay() {
