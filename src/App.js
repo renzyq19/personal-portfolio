@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import NavBar from './NavBar';
+import voicereel from './voicereel.mp3';
 import HeadshotCarousel from './HeadshotCarousel';
 import './App.css';
 
@@ -53,6 +54,12 @@ const Information = () => (
         For ticket information,
         please contact <a href="mailto:drama@gsmd.ac.uk">drama@gsmd.ac.uk</a>
       </p>
+    </div>
+    <div className="card-block">
+      <p className="card-text">
+        Voice Reel
+      </p>
+      <audio src={voicereel} controls />
     </div>
     <div className="card-footer">
       <p className="card-text">

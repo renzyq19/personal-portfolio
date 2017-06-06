@@ -29,6 +29,10 @@
   padding: 0;
 }
 
+audio {
+  width: 100%;
+}
+
 .carousel-control-prev, .carousel-control-next {
   margin-bottom:50px;
 }
