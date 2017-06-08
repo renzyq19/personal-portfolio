@@ -4,7 +4,7 @@ import Video from './Video';
 import showreel from './showreel.mp4';
 
 class HeadshotCarousel extends React.Component {
-  constructor(){
+  constructor() {
     super();
     this.carouselID = 'headshotCarousel';
     this.togglePlay = this.togglePlay.bind(this);
@@ -12,7 +12,7 @@ class HeadshotCarousel extends React.Component {
     this.handleSlid = this.handleSlid.bind(this);
     this.state = {
       videoVisible: false,
-    }
+    };
   }
 
   componentDidMount() {

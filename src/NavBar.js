@@ -1,18 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import logo from './guildhall-logo.svg';
 import logo2 from './MWLimited_WEBHEADER_400x73px.png';
 
-const buildLinks = list => list.map(
-  ((name, i) => {
-    const lowerName = name.toLowerCase();
-    const classes = `nav-item nav-link ${i ? 'disabled' : ''}`;
-    return <NavLink activeClassName="active" className={classes} to={`/${lowerName}`} key={lowerName}>{name}</NavLink>;
-  }));
-
-
-const NavBar = props => (
+const NavBar = () => (
   <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
     <button
       className="navbar-toggler navbar-toggler-right" type="button"
@@ -28,16 +19,13 @@ const NavBar = props => (
     <div className="container">
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          {buildLinks(props.links)}
+          <NavLink exact activeClassName="active" className="nav-link" to="/"> Home </NavLink>
+          <NavLink activeClassName="active" className="nav-link" to="/voice"> Voice </NavLink>
         </div>
       </div>
     </div>
   </nav>
 );
 
-
-NavBar.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 export default NavBar;
