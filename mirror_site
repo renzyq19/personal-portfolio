@@ -3,7 +3,7 @@
 if [ ${PWD##*/} = "portfolio" ]
 then
   npm run build
-  lftp ftp.renzy.co.uk -e "mirror -R build .;exit"
+  scp -r ./build/* root@will.derenzymartin.com:/www/data
 else
   echo "Only to be run in portfolio root!"
 fi
