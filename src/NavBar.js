@@ -6,9 +6,13 @@ import logo2 from './MWLimited_WEBHEADER_400x73px.png';
 const NavBar = () => (
   <nav className="navbar navbar-toggleable navbar-light navbar-fixed-top bg-faded">
     <button
-      className="navbar-toggler navbar-toggler-right" type="button"
-      data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+      className="navbar-toggler navbar-toggler-right"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
       <span className="navbar-toggler-icon" />
     </button>
@@ -19,13 +23,15 @@ const NavBar = () => (
     <div className="container">
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <NavLink exact activeClassName="active" className="nav-link" to="/"> Home </NavLink>
-          <NavLink activeClassName="active" className="nav-link" to="/voice"> Voice </NavLink>
+          <NavLink exact activeClassName="active" className="nav-link" to="/">
+            {' '}
+            Home{' '}
+          </NavLink>
+          {/* <NavLink activeClassName="active" className="nav-link" to="/voice"> Voice </NavLink> */}
         </div>
       </div>
     </div>
   </nav>
 );
-
 
 export default NavBar;
