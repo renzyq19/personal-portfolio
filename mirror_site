@@ -1,9 +1,9 @@
 #!/bin/sh
 
-if [ ${PWD##*/} = "portfolio" ]
+if [ ${PWD##*/} = "personal-portfolio" ]
 then
   npm run build
-  scp -r ./build/* root@will.derenzymartin.com:/www/data
+  rsync -r ./build/* root@will.derenzymartin.com:/www/data
 else
   echo "Only to be run in portfolio root!"
 fi
