@@ -8,14 +8,14 @@ import './App.css';
 const name = 'Will de Renzy-Martin';
 const links = [
   'Home',
-  'Voice',
+  // 'Voice',
 ];
 
 const App = () => (
   <div>
     <NavBar name={name} links={links} />
     <Route exact path="/" component={Home} />
-    <Route exact path="/voice" component={Voice} />
+    {/* <Route exact path="/voice" component={Voice} /> */}
   </div>
 );
 
